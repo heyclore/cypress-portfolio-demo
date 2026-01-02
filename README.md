@@ -1,4 +1,3 @@
-# cypress-portfolio-demo
 Project Tree
 ```
 .
