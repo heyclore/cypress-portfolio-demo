@@ -1,57 +1,63 @@
-# Playwright Portfolio Demo
+# Cypress Portfolio Demo
 
-This repository showcases a test automation suite built using **Playwright** with TypeScript. It demonstrates the ability to create robust, maintainable, and scalable automated tests for web applications. The suite focuses on end-to-end testing, page object modeling, and leveraging Playwright's features for efficient testing.
+This repository showcases an automated testing suite developed using **Cypress**. It is designed to demonstrate proficiency in building robust, maintainable, and scalable automated end-to-end (E2E) testing solutions for web applications. The suite covers critical functionalities, emphasizing best practices in test organization and locator management.
 
 ## Project Overview
 
-This repository contains a collection of automated end-to-end tests for a sample web application, developed using Playwright and TypeScript. The primary goal is to demonstrate proficiency in building and structuring modern, reliable test automation suites.
+This repository contains a collection of automated E2E tests for a sample web application. The primary goal is to demonstrate expertise in leveraging Cypress for effective web testing.
 
 ## Key Features Tested
 
-Based on the project structure (`src/tests/` and `src/pages/`), this demo likely covers:
+The automation suite covers the following core application functionalities:
 
-*   **Navigation**: Testing navigation between different pages of the application (e.g., Home, Docs, Community, API).
-*   **Search Functionality**: Validating the search input and results.
-*   **Page Interactions**: Basic UI element interactions and assertions.
-
-*(Note: Specific features tested are inferred from file names and structure. For precise details, please refer to the test files within `src/tests/`.)*
+*   **Navigation:** Testing the application's navigation elements and flows.
+*   **Search Functionality:** Verifying the search feature to ensure it returns accurate results.
 
 ## Technologies Used
 
-*   **Playwright**: For end-to-end test automation across major browsers.
-*   **TypeScript**: For writing type-safe test scripts and page object definitions.
-*   **Node.js**: The runtime environment for executing Playwright commands and managing project dependencies.
+*   **Cypress:** The primary E2E testing framework.
+*   **TypeScript:** Used for writing test specifications and locator files, providing type safety.
+*   **Node.js:** The runtime environment for Cypress.
 
 ## Project Structure
 
-The project is organized to promote clarity and maintainability:
+The project follows a structured organization to ensure maintainability and reusability, common in Cypress projects:
 
-*   `playwright.config.ts`: Playwright configuration file, defining test directories, timeouts, viewport settings, and browser targets.
-*   `package.json`: Manages project dependencies and defines scripts for running tests.
-*   `src/`: Contains the source code for the test suite.
-    *   `fixtures/`: Custom Playwright test fixtures for shared setup or teardown logic.
-    *   `pages/`: Implements the Page Object Model (POM), with classes representing different pages and components of the application.
-    *   `tests/`: Contains the actual end-to-end test files (e.g., `navigation.spec.ts`, `search.spec.ts`).
-*   `test-results/`: Directory where Playwright generates test reports, traces, and screenshots.
+*   `cypress/`: The root directory for all Cypress-related files.
+    *   `e2e/`: Contains the end-to-end test files (`.cy.ts` or `.spec.ts`).
+        *   `navigations.cy.ts`: Test suite for navigation features.
+        *   `search.cy.ts`: Test suite for search features.
+    *   `fixtures/`: Stores static test data (e.g., JSON files) used across tests.
+        *   `example.json`: An example fixture file.
+    *   `locators/`: Houses files for managing UI element locators, promoting a Page Object Model (POM) pattern.
+        *   `navbarComponents.ts`: Defines locators for navigation bar elements.
+        *   `searchComponents.ts`: Defines locators for search-related elements.
+    *   `screenshots/`: Automatically captures screenshots on test failures.
+    *   `support/`: Contains custom commands, global configurations, and support files.
+        *   `commands.ts`: For defining custom Cypress commands.
+        *   `e2e.ts`: For global E2E test configuration.
+*   `cypress.config.ts`: The main configuration file for Cypress.
+*   `package.json`: Manages project dependencies and scripts.
+*   `tsconfig.json`: TypeScript configuration for the project.
 
 ## Design Approach & Best Practices
 
-This project adheres to modern test automation principles:
+This project adheres to several key principles for effective E2E testing with Cypress:
 
-*   **Page Object Model (POM)**: Utilizes page objects (defined in `src/pages/`) to encapsulate UI elements and their interactions, enhancing test maintainability and reusability.
-*   **Modularity**: Tests are organized into distinct spec files within `src/tests/`, making them easy to locate and manage.
-*   **TypeScript Integration**: Leverages TypeScript for strong typing, improving code quality, reducing runtime errors, and enhancing developer productivity.
-*   **Configuration Management**: `playwright.config.ts` centralizes configuration for test execution, including browser options and timeouts.
+*   **Page Object Model (POM):** The `cypress/locators/` directory is used to maintain UI element locators in a centralized manner, improving test readability and maintainability.
+*   **Modularity:** Test cases are organized into distinct files within `cypress/e2e/`, each focusing on a specific feature (e.g., navigation, search).
+*   **Reusability:** Custom commands defined in `cypress/support/commands.ts` can be used to abstract common testing actions.
+*   **Readability:** Using TypeScript for tests and locators enhances code clarity and reduces potential errors.
 
 ## Portfolio Value
 
 This project demonstrates the ability to:
 
-*   Set up and configure a Playwright testing environment from scratch.
-*   Implement the Page Object Model (POM) for scalable and maintainable test automation.
-*   Write effective end-to-end tests using TypeScript.
-*   Organize test suites logically for efficient execution and reporting.
-*   Utilize Playwright's features for managing test configurations and execution.
+*   Set up and configure Cypress for E2E testing.
+*   Write robust and maintainable E2E tests using Cypress and TypeScript.
+*   Implement a Page Object Model pattern for efficient locator management.
+*   Organize test suites logically for clarity and scalability.
+*   Understand and apply core concepts of modern web automation frameworks.
 
 ## Project Tree
 ```tree
